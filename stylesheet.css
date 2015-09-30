@@ -1,0 +1,216 @@
+body {
+background-color: #eee;
+font-family: 'Open Sans', sans-serif;
+font-size: 1em;
+margin: 0 auto;
+}
+
+body > div,
+body > header, 
+body > main {
+   background-color: #fff;
+   padding: 2em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+header > form > input {
+   border-radius: 2em;
+   margin-bottom: 1em;
+   width: 80%;
+   height: 2em;
+}
+
+header > form > button {
+   width: 15%;
+   height: 2em;
+}
+
+nav{
+  display:-webkit-flex;
+  -webkit-flex-flow:row;
+  -webkit-justify-content:space-between;
+  -webkit-align-items:center;
+  border:1px solid #009B8F;
+  border-radius:4px;
+  margin:0 auto;
+}
+
+nav > a{
+  font-family:Helvetica,Arial,sans-serif;
+  font-weight:bold;
+  text-decoration:none;
+  padding:10px;
+  color:#009B8F;
+  -webkit-flex:1 1 auto;
+  text-align:center;
+}
+
+nav > a:hover{
+  background:#DECDBF;
+  color:#fff;
+}
+
+form, article {
+   width: 100%;
+}
+
+label, textarea, select {
+   display: block;
+}
+
+textarea {
+  height: 10em;
+  width: 95%;
+}
+
+[for="naam"]::after,
+[for="email"]::after {
+   content: " *";
+   color: red;
+   font-size: 0.5em;
+}
+
+input:required {
+   border-color: red;
+}
+
+a {
+   text-decoration:none;
+}
+
+a[href$='.pdf']::before {
+   content: url(http://www.adobe.com/images/shared/product_mnemonics/50x50/acrobat_reader_50x50.gif);
+   display: inline-block;
+   vertical-align: middle;
+   transform: scale(.5);
+}
+
+a[data-size]::after {
+   content: attr(data-size) "kb";
+   display: inline-block;
+   margin-left: .5em;
+   text-decoration: inherit;
+}
+
+a[href$='.pdf'] {
+   padding: 0.2em;
+   padding-right: 1em;
+   background: #fff;
+   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.5);
+   border-radius: 25px;
+}
+
+body > div {
+  display: flex;
+}
+
+main {
+  display: flex;
+}
+
+main > article {
+  padding-right: 1em;
+}
+
+div > main {
+  width: 100%;
+}
+
+h1 {
+   text-shadow: 0.1em 0.1em 0.1em #009B8F;
+}
+
+.is-invisible{
+   display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+picture {
+  display: block;
+  width: 100%;
+}
+
+/* footer */
+
+body > footer {
+  border-top: 1px solid #DECDBF;
+  padding: 1em;
+  display: block;
+}
+
+body > footer > h1 {
+  margin: 1em 0 0 1.5em;
+  font-size: 1.3em;
+}
+
+body > footer > ul {
+  display: flex;
+  justify-content: space-between;
+/*  padding: 1em 4em;*/
+}
+
+body > footer > div {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px dotted #fff;
+}
+
+body > footer > div h1 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+body > footer > div section:nth-child(1) {
+  flex: 2;
+}
+
+body > footer > div section:nth-child(2) {
+  flex: 1;
+}
+
+body > footer > div section:nth-child(3) {
+  flex: 2;
+}
+
+body > footer > ul > section > li {
+  font-weight: bold;
+  list-style-type: none;
+  margin-left: -1em;
+}
+
+header > p {
+    padding-left: 1.5em;
+    font-style: italic;
+}
+
+/* max-width 1000px */
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  
+  main {
+      flex-direction: column;
+  }
+
+}
+
+/* max-width 500 */
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+
+  nav{
+      flex-direction:column;
+    }
+
+  body > footer > ul,
+  body > footer > div  {
+    flex-direction: column;
+  }
+ 
+}
+
